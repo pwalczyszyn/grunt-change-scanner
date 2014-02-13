@@ -1,0 +1,46 @@
+{
+    "name": "grunt-change-scanner",
+    "description": "Grunt task that scans src files for changes based on RegExp pattern. Found changes are reported into a file with Markdown format.",
+    "version": "0.0.2",
+    "homepage": "https://github.com/pwalczyszyn/grunt-change-scanner",
+    "author": {
+        "name": "Piotr Walczyszyn",
+        "email": "piotr.walczyszyn@gmail.com",
+        "url": "http://outof.me"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pwalczyszyn/grunt-change-scanner.git"
+    },
+    "bugs": {
+        "url": "https://github.com/pwalczyszyn/grunt-change-scanner/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "/blob/master/LICENSE"
+        }
+    ],
+    "main": "Gruntfile.js",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-contrib-clean": "~0.4.0",
+        "grunt-contrib-nodeunit": "~0.2.0",
+        "grunt": "~0.4.2"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.2"
+    },
+    "keywords": [
+        "gruntplugin",
+        "change",
+        "Markdown",
+        "scanner"
+    ]
+}
