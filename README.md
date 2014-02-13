@@ -39,6 +39,7 @@ grunt.initConfig({
 
 #### options.pattern
 Type: `String`
+
 No default value: this is a required option
 
 A RegExp pattern that will match for whatever you want to look for. It's expected to have single capturing group:
@@ -54,7 +55,7 @@ The capturing group would return `foo` in this case.
 #### options.banner
 Type: `String`
 
-A banner value that will be appended after ### separator:
+A banner value that will be appended after ## separator:
 
     '<%= grunt.template.today("yyyy-mm-dd HH:MM") %>'
     
