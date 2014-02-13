@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 
             if (prevAll) {
                 prevAll = prevAll[1].trim();
-                prevAll = prevAll.split('\n');
+                prevAll = prevAll.split('  \n');
             } else {
                 prevAll = [];
             }
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 
             // Adding current
             all.forEach(function (match) {
-                results += match[1] + '\n';
+                results += match[1] + '  \n';
             });
 
             results += '\n## ' + (options.banner || '') + '\n';
@@ -71,7 +71,7 @@ module.exports = function (grunt) {
             if (added.length > 0) {
                 results += '### Added\n';
                 added.forEach(function (match) {
-                    results += match[1] + '\n';
+                    results += match[1] + '  \n';
                 });
             }
 
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
             if (removed.length > 0) {
                 results += '### Removed\n';
                 removed.forEach(function (match) {
-                    results += match + '\n';
+                    results += match + '  \n';
                 });
             }
 

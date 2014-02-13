@@ -1,17 +1,17 @@
 # Current
-bar
-qux
+bar  
+qux  
 
 ## v3
 ### Added
-qux
+qux  
 ### Removed
-buz
+buz  
 
 ## v2
 ### Added
-buz
+buz  
 
 ## v1
 ### Added
-bar
+bar  
