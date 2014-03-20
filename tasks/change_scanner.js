@@ -29,11 +29,15 @@ module.exports = function (grunt) {
                 }
             }).forEach(function (filepath) {
                 var match,
+                    matchVal,
                     str = grunt.file.read(filepath),
                     rgx = new RegExp(options.pattern, 'gi');
 
                 while ((match = rgx.exec(str)) !== null) {
-                    all.push(match);
+                  matchVal = match[1];
+                  if (all.indexOf(matchVal) === -1) {
+                    all.push(matchVal);
+                  }
                 }
             });
 
@@ -50,19 +54,19 @@ module.exports = function (grunt) {
 
             // Filtering added matches
             added = all.filter(function (match) {
-                return prevAll.indexOf(match[1]) === -1;
+                return prevAll.indexOf(match) === -1;
             });
 
             // Filtering removed matches
             removed = prevAll.filter(function (prevMatch) {
                 return !all.some(function (match) {
-                    return match[1] === prevMatch;
+                    return match === prevMatch;
                 });
             });
 
             // Adding current
             all.forEach(function (match) {
-                results += match[1] + '  \n';
+                results += match + '  \n';
             });
 
             results += '\n## ' + (options.banner || '') + '\n';
@@ -71,7 +75,7 @@ module.exports = function (grunt) {
             if (added.length > 0) {
                 results += '### Added\n';
                 added.forEach(function (match) {
-                    results += match[1] + '  \n';
+                    results += match + '  \n';
                 });
             }
 
